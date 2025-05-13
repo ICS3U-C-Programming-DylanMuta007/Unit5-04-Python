@@ -41,20 +41,11 @@ def main():
                 or user_sign == "%"
             ):
                 # If the second number is 0 and sign is % or ? says that its invalid
-                if user_sign == "/" or user_sign == "%":
-                    if numb2 == 0:
-                        print("Division by 0 isn't allowed")
-
-                    # If it is division but the second number isn't 0 then runs operation
-                    else:
-                        print("")
-                        result = calc(user_sign, num1, numb2)
-                        print(f"{num1} {user_sign} {numb2} = {result}")
-
+                if numb2 == 0 and (user_sign == "/" or user_sign == "%"):
+                    print("Division by 0 isn't allowed")
                 # If it wasn't / or % then runs the operation
                 else:
                     print("")
-
                     # Function call
                     result = calc(user_sign, num1, numb2)
                     print(f"{num1} {user_sign} {numb2} = {result}")
